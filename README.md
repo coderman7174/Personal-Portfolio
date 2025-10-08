@@ -38,14 +38,14 @@ Version Control :	Git, GitHub
 
 📁 Folder Structure :
 
-'''
+```
 portfolio/
 │
 ├── README.md
 ├── index.html
 ├── /images
 │   └── profile.jpg
-'''
+```
 
 ---
 
