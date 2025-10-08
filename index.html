@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Frontend Developer/MERN Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .skill-pill {
+            transition: all 0.3s ease;
+        }
+        
+        .skill-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        #vanta-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Vanta.js Background -->
+    <div id="vanta-bg"></div>
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-xl font-bold text-blue-500">Shubham Kumar Mishra</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-blue-500 px-3 py-2">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-blue-500 px-3 py-2">About</a>
+                        <a href="#education" class="nav-link text-gray-700 hover:text-blue-500 px-3 py-2">Education</a>
+                        <a href="#skills" class="nav-link text-gray-700 hover:text-blue-500 px-3 py-2">Skills</a>
+                        <a href="#projects" class="nav-link text-gray-700 hover:text-blue-500 px-3 py-2">Projects</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-blue-500 px-3 py-2">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-blue-500 hover:bg-gray-100 focus:outline-none">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Home</a>
+                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-500">About</a>
+                <a href="#education" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Education</a>
+                <a href="#skills" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Skills</a>
+                <a href="#projects" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Projects</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-500">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                      Hi, I'm <span class="text-blue-500">Shubham Kumar Mishra</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-600">
+                    Frontend Developer/ MERN Stack Developer | B.Tech, Computer Science and Engineering
+                </h2>
+                <p class="text-lg mb-8 text-gray-600 max-w-lg">
+                    Creative and detail-oriented Frontend Developer/ MERN Stack Developer. Experienced in building responsive, user-friendly websites, integrating APIs, to deliver high quality web solutions.
+                </p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    
+                    <a href="https://flowcv.com/resume/s0boivrasslg"   target="_blank" rel="noopener noreferrer"      class="px-8 py-3 border-2 border-blue-500 text-blue-500 rounded-lg font-medium hover:bg-blue-50 transition duration-300">
+                        View Resume (Frontend Developer)
+                    </a>
+                    <a href="https://flowcv.com/resume/woawowkmasup"   target="_blank" rel="noopener noreferrer"      class="px-8 py-3 border-2 border-blue-500 text-blue-500 rounded-lg font-medium hover:bg-blue-50 transition duration-300">
+                        View Resume (MERN Stack Developer)
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-blue-500 shadow-xl">
+                   <img src= "profile.jpg"
+     alt="Profile Photo" >
+     class="w-full h-full object-cover">
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1">
+                <h3 class="text-2xl font-semibold mb-4">Who am I ?</h3>
+                <p class="text-gray-600 mb-6">
+                   Hi, I'm Shubham Kumar Mishra from Lucknow. A passionate Frontend Developer/MERN Stack Developer with a Bachelor's degree in Computer Science and Engineering. I specialize in creating responsive, user-friendly web applications using modern JavaScript frameworks and libraries.
+                </p>
+                <p class="text-gray-600 mb-6">
+                    With a strong foundation in computer science principles and hands-on experience in web development, I bridge the gap between technical implementation and user experience.
+                </p>
+                <p class="text-gray-600 mb-8">
+                    When I'm not coding, you can find me contributing to open-source projects, learning new technologies, or exploring the latest design trends.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://github.com/coderman7174" target="_blank" rel="noopener noreferrer" class="text-gray-700 hover:text-blue-500">
+                        <i data-feather="github" class="w-6 h-6"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/shubhamkm/" target="_blank"   rel="noopener noreferrer" class="text-gray-700 hover:text-blue-500">
+                        <i data-feather="linkedin" class="w-6 h-6"></i>
+                    </a>
+                    
+                 
+        
+                   
+                </div>
+            </div>
+            <div class="order-1 md:order-2 flex justify-center">
+                <div class="bg-blue-50 p-8 rounded-xl shadow-lg">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                            <div class="text-blue-500 mb-2">
+                                 <i data-feather="user" class="w-8 h-8 mx-auto"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Personal Values</h4>
+                            <p class="text-sm text-gray-600">I value analytical thinking, collaboration, problem-solving and creating software that makes a positive impact. I believe in writing code that others can easily understand and maintain.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                             <div class="text-blue-500 mb-2">
+                <i data-feather="code" class="w-8 h-8 mx-auto"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Technical Focus</h4>
+                            <p class="text-sm text-gray-600">My backgroud includes web development with MERN stack, along with core programming concepts and software design principles.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+              <div class="text-blue-500 mb-2">
+                <i data-feather="star" class="w-8 h-8 mx-auto"></i>
+              </div>
+              <h4 class="font-semibold mb-2">Strengths</h4>
+                            <p class="text-sm text-gray-600">Strong analytical skills, ability to learn new technologies quickly, attention to detail.</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                            <div class="text-blue-500 mb-2">
+                                <i data-feather="target" class="w-8 h-8 mx-auto"></i>
+                            </div>
+                            <h4 class="font-semibold mb-2">Current Goals</h4>
+                            <p class="text-sm text-gray-600">Expanding my knowledge across the software development spectrum while applying my web development expertise to create robust, scalable web solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-50">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Education</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+        
+        <div class="max-w-3xl mx-auto">
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-1/2 w-1 h-full bg-blue-200 transform -translate-x-1/2"></div>
+                
+                <!-- Timeline items -->
+                <div class="space-y-8">
+                    <!-- Education Item 1 -->
+                    <div class="relative flex items-center">
+                        <div class="hidden md:flex flex-shrink-0 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-md"></div>
+                        
+                        <div class="md:w-1/2 md:pr-8 md:text-right">
+                            <div class="p-6 bg-white rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-2">Bachelor of Technology</h3>
+                                <p class="text-blue-500 font-medium mb-2">Computer Science & Engineering</p>
+                                <p class="text-gray-600 mb-2">Babu Banarasi Das Institute of Technology and Management, 2022 - 2026</p>
+                                <p class="text-gray-600">CGPA: 7.9/10.0</p>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-8 md:text-left">
+                            <!-- Empty on right side -->
+                        </div>
+                    </div>
+                    
+                    <!-- Education Item 2 -->
+                    <div class="relative flex items-center">
+                        <div class="hidden md:flex flex-shrink-0 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-md"></div>
+                        
+                        <div class="md:w-1/2 md:pr-8 md:text-right">
+                            <!-- Empty on left side -->
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-8">
+                            <div class="p-6 bg-white rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-2">Intermediate, PCM</h3>
+                                
+                                <p class="text-gray-600 mb-2">Central Academy, 2021 - 2022</p>
+                                <p class="text-gray-600">Percentage: 78.8%</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Education Item 3 -->
+                    <div class="relative flex items-center">
+                        <div class="hidden md:flex flex-shrink-0 absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 top-1/2 w-6 h-6 rounded-full bg-blue-500 border-4 border-white shadow-md"></div>
+                        
+                        <div class="md:w-1/2 md:pr-8 md:text-right">
+                            <div class="p-6 bg-white rounded-lg shadow-md">
+                                <h3 class="text-xl font-semibold mb-2">High School</h3>
+                                
+                                <p class="text-gray-600 mb-2">Central Academy, 2019 - 2020</p>
+                                <p class="text-gray-600">Percentage: 83.83%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="md:w-1/2 md:pl-8 md:text-left">
+                            <!-- Empty on right side -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Skills</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <!-- Technical Skills -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                    <i data-feather="code" class="mr-3 text-blue-500"></i>
+                    Technical Skills
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">HTML5</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">CSS3</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">JavaScript</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">React.js</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Node.js</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Next.js</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Express.js</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Python</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">MongoDB</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">GitHub</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Git</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">VS Code</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">DSA</span>
+                </div>
+            </div>
+            
+            <!-- Soft Skills -->
+            <div>
+                <h3 class="text-2xl font-semibold mb-6 flex items-center">
+                    <i data-feather="users" class="mr-3 text-blue-500"></i>
+                    Soft Skills
+                </h3>
+                <div class="flex flex-wrap gap-3">
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Communication</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Teamwork</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Problem Solving</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Time Management</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Adaptability</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Creativity</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Leadership</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Critical Thinking</span>
+                    <span class="skill-pill px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-medium">Attention to Detail</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-50">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Projects</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="project-card bg-white rounded-xl overflow-hidden shadow-md">
+                <div class="h-48 overflow-hidden">
+                    <img src="http://static.photos/technology/600x400/1" alt="Project 1" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Culina- Recipe Finder</h3>
+                    <p class="text-gray-600 mb-4">Is a visually appealing recipe discovery website powered by the TheMealDB API.</p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded">HTML5</span>
+                        <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded">CSS3</span>
+                        <span class="text-xs px-2 py-1 bg-blue-100 text-blue-700 rounded">JavaScript</span>
+                    </div>
+                    <div class="flex space-x-3">
+                        <a href="https://github.com/coderman7174/Recipe-Finder" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 flex items-center">
+                            <i data-feather="github" class="w-4 h-4 mr-1"></i> Code
+                        </a>
+                        <a href="https://coderman7174.github.io/Recipe-Finder/" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:text-blue-700 flex items-center">
+                            <i data-feather="external-link" class="w-4 h-4 mr-1"></i> Live
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            
+        
+        <div class="text-center mt-12">
+            <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-500 hover:bg-blue-600">
+                View All Projects
+                <i data-feather="arrow-right" class="ml-2 w-4 h-4"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-white">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+            <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                <p class="text-gray-600 mb-8">
+                    Feel free to reach out to me for any questions or opportunities. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+                </p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-500">
+                            <i data-feather="mail" class="w-5 h-5"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-sm font-medium text-gray-500">Email</h4>
+                            <p class="text-base text-gray-900">shubhammishra7174@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-500">
+                            <i data-feather="phone" class="w-5 h-5"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-sm font-medium text-gray-500">Phone</h4>
+                            <p class="text-base text-gray-900">+91 7417127001</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0 h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-500">
+                            <i data-feather="map-pin" class="w-5 h-5"></i>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-sm font-medium text-gray-500">Location</h4>
+                            <p class="text-base text-gray-900">Lucknow, India</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="text-sm font-medium text-gray-500 mb-4">Follow Me</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://github.com/coderman7174" target="_blank" rel="noopener noreferrer" class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 hover:bg-blue-500 hover:text-white">
+                            <i data-feather="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/shubhamkm/" target="_blank"   rel="noopener noreferrer"         class="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-500 hover:bg-blue-500 hover:text-white">
+                            <i data-feather="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                        <input type="email" id="email" name="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700">Subject</label>
+                        <input type="text" id="subject" name="subject" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                    </div>
+                    
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Shubham Kumar Mishra</h3>
+                    <p class="text-gray-400">
+                        A portfolio showcasing my skills, projects, and journey as a Frontend Developer/ MERN Stack Developer.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white">About</a></li>
+                        <li><a href="#education" class="text-gray-400 hover:text-white">Education</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white">Skills</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+          <h4 class="text-lg font-semibold mb-4">Connect With Me</h4>
+          <div class="flex space-x-4">
+            <a href="https://github.com/coderman7174" target="_blank" rel="noopener noreferrer" class="h-10 w-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-blue-500">
+              <i data-feather="github" class="w-5 h-5"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/shubhamkm/" target="_blank"   rel="noopener noreferrer" class="h-10 w-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-blue-500">
+              <i data-feather="linkedin" class="w-5 h-5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>&copy; 2025 Shubham Kumar Mishra. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+    <script>
+        // Initialize Feather Icons
+        feather.replace();
+        
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu-button').addEventListener('click', function() {
+            document.querySelector('.mobile-menu').classList.toggle('hidden');
+        });
+        
+        // Initialize Vanta.js
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x3b82f6,
+            backgroundColor: 0xf8fafc,
+            points: 12.00,
+            maxDistance: 23.00,
+            spacing: 19.00
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                
+                // Close mobile menu if open
+                document.querySelector('.mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
