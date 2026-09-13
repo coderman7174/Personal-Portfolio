@@ -1,6 +1,7 @@
 🌐 Personal Portfolio Website :
 
-Welcome to my Personal Portfolio Website — a responsive and modern web portfolio built using HTML, CSS, Tailwind CSS, and JavaScript.
+Welcome to my Personal Portfolio Website — a responsive and modern web portfolio built using JavaScript, HTML5, CSS3 and Tailwind CSS
+
 It showcases my projects, skills, and contact information in a clean, professional layout.
 
 
@@ -27,7 +28,7 @@ It highlights my work as a Frontend Developer / MERN Stack Developer, including 
 
 Technologies Used
 
-Frontend :	HTML5, CSS3, Tailwind CSS, JavaScript
+Frontend : JavaScript,HTML5, CSS3, Tailwind CSS
 Icons :	Feather Icons
 Deployment :	GitHub Pages / Netlify
 Version Control :	Git, GitHub
@@ -58,7 +59,7 @@ https://coderman7174.github.io/Personal-Portfolio/
 
 🧠 Future Improvements
 
-Add backend for contact form using Node.js or EmailJS
+Add backend for contact form using Node.js
 
 Include animation on scroll using AOS.js
 
@@ -68,7 +69,7 @@ Add a project filter by category
 
 ---
 
-📜 License
+📜 License 2026
 
 This project is open-source and available under the MIT License.
 
