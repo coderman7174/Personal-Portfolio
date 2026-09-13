@@ -1,6 +1,6 @@
 🌐 Personal Portfolio Website :
 
-Welcome to my Personal Portfolio Website — a responsive and modern web portfolio built using JavaScript, HTML5, CSS3 and Tailwind CSS
+Welcome to my Personal Portfolio Website — a responsive and modern web portfolio built using JavaScript(ES6+), HTML5, CSS3 and Tailwind CSS
 
 It showcases my projects, skills, and contact information in a clean, professional layout.
 
@@ -28,10 +28,15 @@ It highlights my work as a Frontend Developer / MERN Stack Developer, including 
 
 Technologies Used
 
-Frontend : JavaScript,HTML5, CSS3, Tailwind CSS
-Icons :	Feather Icons
-Deployment :	GitHub Pages / Netlify
+Frontend : JavaScript(ES6+),HTML5, CSS3, Tailwind CSS
+
+Deployment :	GitHub Pages
+
 Version Control :	Git, GitHub
+
+Development Tools : VS Code
+
+Icons :	Feather Icons
 
 
 
